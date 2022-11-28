@@ -1,5 +1,5 @@
 <?php include_once("lib/functions.php"); 
-$createTable = new createTable();
+$createTable = new vehiculosR5();
 $createTable->create_db();
 ?>
 <html>
@@ -23,7 +23,7 @@ $createTable->create_db();
         </div>
 
         <div class="content-form">
-            <form class="form-add-car">
+            <form class="form-add-car" action="./lib/ajax.php?upload" method="post" enctype="multipart/form-data">
                 <div class="element-field">
                   <select name="estado" class="m-field">
                     <option value="">Seleccione el estado</option>
@@ -47,10 +47,10 @@ $createTable->create_db();
                   <input type="number" name="year" placeholder="Año" class="m-field yearpickerM">
                 </div>
                 <div class="element-field">
-                  <input type="text" name="Precio" placeholder="Precio" class="m-field" id="price">
+                  <input type="text" name="precio" placeholder="Precio" class="m-field" id="price">
                 </div>
                 <div class="element-field">
-                  <input type="file" name="imagen" class="m-field">
+                  <input type="file" name="imagen" class="m-field" accept="image/*">
                 </div>
                 <div class="footer-form">
                     <input type="submit" name="submit" class="btn" value="Agregar">

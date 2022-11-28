@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 include_once("config.php");
 
-class createTable extends db_connection{
+class vehiculosR5 extends db_connection{
 
 	public function create_db(){
 		$mysqli = new mysqli($this->_host, $this->_db_user, $this->_db_password);
@@ -21,6 +21,7 @@ class createTable extends db_connection{
 		    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 		    estado VARCHAR(30) NOT NULL,
 		    marca VARCHAR(30) NOT NULL,
+		    linea VARCHAR(30) NOT NULL,
 		    year VARCHAR(30) NOT NULL,
 		    precio VARCHAR(30) NOT NULL,
 		    imagen VARCHAR(150) NOT NULL
@@ -29,18 +30,34 @@ class createTable extends db_connection{
 		$mysqli->close();
 	}
 
-}
+	public function insert($table, $fields = false, $values = false) {
 
-class vehiculosR5 {
-  // Properties
-  public $search;
-  public $color;
+			$conn = new mysqli($this->_host, $this->_db_user, $this->_db_password, $this->_db_name);
 
-  // Methods
-  function consulta_vehiculos($search) {
-    $this->search = $search;
-  }
-  function get_vehiculos() {
-    return $this->search;
-  }
+			// Check connection
+			if ($conn->connect_error) {
+			  die("Connection failed: " . $conn->connect_error);
+			}
+
+			if($fields && $values):
+
+				$sql = "INSERT INTO $table ($fields) VALUES ($values)";
+				if ($conn->query($sql) === TRUE) {
+					$result = 1;
+				} else {
+				  $result = "Error: " . $sql . "<br>" . $conn->error;
+				}
+
+				return $result;
+
+			else:
+
+				die('Invalid Columns');
+
+			endif;
+
+			$conn->close();
+
+	}
+
 }

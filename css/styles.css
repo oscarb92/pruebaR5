@@ -102,3 +102,13 @@ form.form-add-car {
 	background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
 }
+/* FOOTER */
+footer {
+    background: #070707;
+    margin: 0;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+    color: #fff;
+}
