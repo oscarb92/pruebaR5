@@ -57,7 +57,8 @@ body, html{
 }
 
 /* FORM - AGREGAR */
-.content-form {
+.content-form,
+.content-m {
     max-width: 80rem;
     margin: auto;
     padding: 4rem var(--padding-x);
@@ -86,11 +87,14 @@ form.form-add-car {
     line-height: 1;
     padding: 0.5em 1em;
 }
+.select2-container {
+    width: 100% !important;
+}
 .btn {
     background-color: var(--color-btn);
     border: 1px solid var(--color-btn);
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     line-height: 1;
     padding: 0.5em 1em;
     outline: none;
@@ -101,6 +105,87 @@ form.form-add-car {
 .btn:hover{
 	background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
+}
+.alert-form {
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid;
+    padding: 1rem;
+    background-color: #fad99d;
+    color: #8f4d00;
+}
+.alert-form[data-alert="success"] {
+    background-color: #c1ffc1;
+    color: #005700;
+}
+.flex-form-search {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-form-search .m-field-search {
+    width: 20%;
+    padding: 0 0.5rem;
+}
+.block-search {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.flex-form-search .m-field-search input.btn {
+    width: 100%;
+    background-color: var(--color-btn);
+}
+.flex-form-search {
+    padding: 1.5rem 1.2rem;
+    background-color: #598189;
+}
+.flex-form-search  .select2-container .select2-selection--single {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*SEARCH*/
+.flex-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-results .item-car-box {
+    width: 33.3%;
+}
+.item-car-box .conte-box .img-box {
+    height: 15rem;
+    overflow: hidden;
+}
+.item-car-box .conte-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.conte-box {
+    margin: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px 5px #0000001f;
+}
+.content-txt-box {
+    padding: 1rem 1.5rem;
+}
+.item-list-box.price-box {
+    padding: 1rem;
+    text-align: center;
+}
+.item-list-box.price-box {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    background-color: var(--color-btn);
+    margin-top: 1rem;
+    line-height: 1;
+    color: #fff;
+}
+.content-txt-box h3 {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 /* FOOTER */
 footer {

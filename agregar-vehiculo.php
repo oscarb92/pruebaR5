@@ -24,15 +24,16 @@ $createTable->create_db();
 
         <div class="content-form">
             <form class="form-add-car" action="./lib/ajax.php?upload" method="post" enctype="multipart/form-data">
+                <div class="alert-form" style="display: none;"></div>
                 <div class="element-field">
-                  <select name="estado" class="m-field">
+                  <select name="estado" class="m-field" required>
                     <option value="">Seleccione el estado</option>
                     <option value="nuevo">Nuevo</option>
                     <option value="nuevo">Usado</option>
                   </select>
                 </div>
                 <div class="element-field">
-                  <select name="marca" class="m-field marca-select2">
+                  <select name="marca" class="m-field marca-select2" required>
                     <option value="">Selecciona una marca</option>
                     <option value="Mazda">Mazda</option>
                     <option value="Toyota">Toyota</option>
@@ -41,13 +42,13 @@ $createTable->create_db();
                   </select>
                 </div>
                 <div class="element-field">
-                  <input type="text" name="linea" placeholder="Línea" class="m-field">
+                  <input type="text" name="linea" placeholder="Línea" class="m-field" required>
                 </div>
                 <div class="element-field">
-                  <input type="number" name="year" placeholder="Año" class="m-field yearpickerM">
+                  <input type="number" name="year" placeholder="Año" class="m-field yearpickerM" required>
                 </div>
                 <div class="element-field">
-                  <input type="text" name="precio" placeholder="Precio" class="m-field" id="price">
+                  <input type="text" name="precio" placeholder="Precio" class="m-field" id="price" required>
                 </div>
                 <div class="element-field">
                   <input type="file" name="imagen" class="m-field" accept="image/*">

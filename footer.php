@@ -1,3 +1,3 @@
 <footer>
-	<p>2022. Buscardor</p>
+	<p>2022. Buscador</p>
 </footer>
