@@ -38,7 +38,8 @@ $createTable->create_db();
                     <option value="Mazda">Mazda</option>
                     <option value="Toyota">Toyota</option>
                     <option value="Ford">Ford</option>
-                    <option value="Hyunday">Hyunday</option>
+                    <option value="Hyunday">Hyundai</option>
+                    <option value="Kia">Kia</option>
                   </select>
                 </div>
                 <div class="element-field">
