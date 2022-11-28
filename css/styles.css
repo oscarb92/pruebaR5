@@ -197,3 +197,29 @@ footer {
     font-size: .9rem;
     color: #fff;
 }
+
+@media screen and (max-width: 980px){
+    :root{
+        font-size: 14px;
+    }
+    .flex-results .item-car-box {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 780px){
+    .flex-form-search .m-field-search {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .flex-form-search .m-field-search:last-child{
+        margin-bottom: 0;
+    }
+    .flex-form-search {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 680px){
+    .flex-results .item-car-box {
+        width: 100%;
+    }
+}
