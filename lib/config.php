@@ -14,7 +14,6 @@ class db_connection{
 	protected $_host = "localhost";
 
 	/** table name */ 
-	public $_users_table  = "usuarios";
-	public $_puntaje_table  = "puntaje";
+	public $_vehiculos_table  = "vehiculos";
 
 }

@@ -1,18 +1,20 @@
-<?php include_once("lib/functions.php"); ?>
+<?php include_once("lib/functions.php"); 
+$createTable = new createTable();
+$createTable->create_db();
+?>
 <html>
   <head>
-    <title>Consulta Vehículos</title>
+    <title>Agregar Vehículo</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script src="./js/script.js"></script>
   </head>
-   <body>
+  <body>
     <div class="m-container">
         <?php include_once("header.php"); ?>
-        <div class="m-content">
-          <div class="m-head">
-            <h1>Listado de vehículos</h1>
-          </div>
+        <div class="m-head">
+          <h1>Agregar vehículo</h1>
         </div>
+
     </div>
   </body>
 </html>
