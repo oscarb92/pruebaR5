@@ -1,0 +1,104 @@
+/*SETTINGS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+body, html{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	font-size: 1vw;
+	--color-btn: #ec6b43;
+	--color-primary: #598189;
+	--font-color: #646464;
+	--padding-x: 3rem;
+}
+*{
+	box-sizing: border-box;
+}
+/*HEADER*/
+.flex_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem var(--padding-x);
+}
+.flex_header .logo img {
+    max-width: 8rem;
+}
+.m-menu ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+.m-menu li {
+    margin: 0 1rem;
+    display: inline-block;
+}
+.m-menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+/*BANNER TOP*/
+.m-head{
+	background-color: #747474;
+	background-image: url(../assets/images/head.jpg);
+	padding: 3rem var(--padding-x);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.m-head h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* FORM - AGREGAR */
+.content-form {
+    max-width: 80rem;
+    margin: auto;
+    padding: 4rem var(--padding-x);
+}
+form.form-add-car {
+    max-width: 40rem;
+    margin: auto;
+}
+.element-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.m-field {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0.5em 0.8em;
+}
+.footer-form {
+    text-align: center;
+    margin-top: 2rem;
+}
+.content-form .select2-container .select2-selection--single {
+    height: auto;
+    line-height: 1;
+    padding: 0.5em 1em;
+}
+.btn {
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5em 1em;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.btn:hover{
+	background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}

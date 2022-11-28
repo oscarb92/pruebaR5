@@ -1,7 +1,7 @@
 <header>
   <div class="flex_header">
     <div class="logo">
-      
+      <img src="./assets/images/logo.png">
     </div>
     <div class="m-menu">
       <ul>

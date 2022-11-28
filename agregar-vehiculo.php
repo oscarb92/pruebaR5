@@ -5,7 +5,14 @@ $createTable->create_db();
 <html>
   <head>
     <title>Agregar Vehículo</title>
+    <link rel="stylesheet" type="text/css" href="./css/yearpicker.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/simple-mask-money.js"></script>
+    <script src="./js/yearpicker.js"></script>
     <script src="./js/script.js"></script>
   </head>
   <body>
@@ -15,6 +22,43 @@ $createTable->create_db();
           <h1>Agregar vehículo</h1>
         </div>
 
+        <div class="content-form">
+            <form class="form-add-car">
+                <div class="element-field">
+                  <select name="estado" class="m-field">
+                    <option value="">Seleccione el estado</option>
+                    <option value="nuevo">Nuevo</option>
+                    <option value="nuevo">Usado</option>
+                  </select>
+                </div>
+                <div class="element-field">
+                  <select name="marca" class="m-field marca-select2">
+                    <option value="">Selecciona una marca</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Hyunday">Hyunday</option>
+                  </select>
+                </div>
+                <div class="element-field">
+                  <input type="text" name="linea" placeholder="Línea" class="m-field">
+                </div>
+                <div class="element-field">
+                  <input type="number" name="year" placeholder="Año" class="m-field yearpickerM">
+                </div>
+                <div class="element-field">
+                  <input type="text" name="Precio" placeholder="Precio" class="m-field" id="price">
+                </div>
+                <div class="element-field">
+                  <input type="file" name="imagen" class="m-field">
+                </div>
+                <div class="footer-form">
+                    <input type="submit" name="submit" class="btn" value="Agregar">
+                </div>
+            </form>
+        </div>
+
     </div>
+    <?php include_once("footer.php"); ?>
   </body>
 </html>
