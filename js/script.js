@@ -86,20 +86,24 @@ jQuery(document).ready(function($){
                  success: function(data){
                     console.log(data);
                     if(data.completado){
-                      var values = data.data;
-                      var html= '';
-                      for (let row of values) {
-                          var image = (row.imagen).replaceAll("..",".");
-                          var precio = Number(row.precio).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                          image = image == "" ? "./assets/images/logo.png" : image;
-                          html += '<div class="item-car-box"><div class="conte-box"><div class="img-box"><img src="'+image+'"></div><div class="content-txt-box">';
-                          html += '<h3>'+row.marca+'</h3>';
-                          html += '<div class="item-list-box"><span>Estado</span>: '+row.estado+'</div>';
-                          html += '<div class="item-list-box"><span>Línea</span>: '+row.linea+'</div>';
-                          html += '<div class="item-list-box"><span>Año</span>: '+row.year+'</div>';
-                          html += '<div class="item-list-box price-box"><span>Precio</span>: $'+precio+'</div>';
-                          html += '</div></div></div>';
-                      }
+                    	var html= '';
+                    	if(data.data){
+	                      var values = data.data;
+	                      for (let row of values) {
+	                          var image = (row.imagen).replaceAll("..",".");
+	                          var precio = Number(row.precio).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+	                          image = image == "" ? "./assets/images/logo.png" : image;
+	                          html += '<div class="item-car-box"><div class="conte-box"><div class="img-box"><img src="'+image+'"></div><div class="content-txt-box">';
+	                          html += '<h3>'+row.marca+'</h3>';
+	                          html += '<div class="item-list-box"><span>Estado</span>: '+row.estado+'</div>';
+	                          html += '<div class="item-list-box"><span>Línea</span>: '+row.linea+'</div>';
+	                          html += '<div class="item-list-box"><span>Año</span>: '+row.year+'</div>';
+	                          html += '<div class="item-list-box price-box"><span>Precio</span>: $'+precio+'</div>';
+	                          html += '</div></div></div>';
+	                      }
+	                  }else{
+	                  	html += '<div class="not-found-cars"><h2>¡No se han encontrado vehículos con los criterios de búsqueda!</h2></div>';
+	                  }
                       $(".content-results .flex-results").html(html);
                     }else{
                       

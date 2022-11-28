@@ -187,6 +187,10 @@ form.form-add-car {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
+.not-found-cars {
+    text-align: center;
+    width: 100%;
+}
 /* FOOTER */
 footer {
     background: #070707;
